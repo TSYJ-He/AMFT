@@ -1,0 +1,11 @@
+# /amft-project/configs/training/baselines.yaml
+
+luffy:
+  policy_shaping_gamma: 0.1
+srft:
+  sft_weight_alpha: 0.5
+  rl_weight_beta: 0.1
+
+# --- Other Baselines ---
+# If you were to implement other baselines like ReLIFT or TAPO, their specific
+# hyperparameters would be added here.

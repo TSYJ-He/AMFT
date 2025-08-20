@@ -1,0 +1,19 @@
+# /amft-project/configs/data/virl_navigation.yaml
+
+# -----------------------------------------------------------------------------
+# Data configuration for the V-IRL (Vision-Language Navigation) task.
+# This file is loaded by the UnifiedDataModule when task_name is 'virl_navigation'.
+
+data_path: "./data_files/virl_data.jsonl"
+
+# Batch size for this task.
+batch_size: 8
+
+max_seq_length: 1024
+num_workers: 8
+
+
+action_space_mode: 'absolute'
+
+
+visual_domain: 'nyc'

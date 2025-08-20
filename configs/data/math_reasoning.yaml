@@ -1,0 +1,10 @@
+# /amft-project/configs/data/math_reasoning.yaml
+
+data_path: "Elliott/OpenR1-Math-46k-8192"
+
+# Batch size for training and validation data loaders for this specific task.
+batch_size: 8
+
+max_seq_length: 2048
+
+num_workers: 8

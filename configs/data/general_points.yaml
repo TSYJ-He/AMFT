@@ -1,0 +1,13 @@
+# /amft-project/configs/data/general_points.yaml
+
+data_path: "./data_files/gp_data.jsonl"
+
+
+batch_size: 8
+
+max_seq_length: 512
+
+num_workers: 8
+
+rule_variant: '10'
+visual_variant: 'black'

@@ -1,0 +1,8 @@
+# /amft-project/configs/training/sft_params.yaml
+
+
+learning_rate: 5.0e-5
+
+num_train_epochs: 3
+lr_scheduler_type: "cosine"
+warmup_ratio: 0.1

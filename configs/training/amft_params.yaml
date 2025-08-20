@@ -1,0 +1,37 @@
+# /amft-project/configs/training/amft_params.yaml
+
+
+
+rl_params:
+
+  ppo_clip_epsilon: 0.2
+
+  # This balances the policy (actor) and value (critic) updates.
+  value_loss_coeff: 0.1
+
+
+  entropy_coeff: 0.01
+
+  gamma: 1.0
+
+
+  gae_lambda: 0.95
+
+
+controller:
+
+  initial_mu: 0.8
+
+
+  # validation performance.
+  meta_lr: 1.0e-4
+
+
+  entropy_lr: 5.0e-4
+
+
+  mu_min: 0.05
+  mu_max: 0.95
+
+
+  meta_update_freq: 20

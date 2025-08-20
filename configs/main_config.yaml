@@ -1,0 +1,46 @@
+# /amft-project/configs/main_config.yaml
+
+
+project_name: "amft-reasoning-experiments"
+task_name: "math_reasoning"
+model_name_or_path: "Qwen/Qwen2.5-7B-Math"
+output_dir: "./outputs"
+seed: 42
+num_workers: 8
+
+training:
+  policy_lr: 1.0e-6
+  value_lr: 5.0e-6
+  total_steps: 500
+  warmup_steps: 50
+  batch_size: 8
+  max_seq_length: 2048
+  max_grad_norm: 1.0
+  logging_steps: 10
+  save_steps: 100
+
+rl_params:
+  ppo_clip_epsilon: 0.2
+  value_loss_coeff: 0.1
+  entropy_coeff: 0.01
+  gamma: 1.0
+  gae_lambda: 0.95
+
+controller:
+  initial_mu: 0.8
+  meta_lr: 1.0e-4
+  entropy_lr: 5.0e-4
+  mu_min: 0.05
+  mu_max: 0.95
+  meta_update_freq: 20
+math_reasoning:
+  data_path: "Elliott/OpenR1-Math-46k-8192"
+general_points:
+  data_path: "./data_files/gp_data.jsonl"
+  rule_variant: '10'
+  visual_variant: 'black'
+virl_navigation:
+  data_path: "./data_files/virl_data.jsonl"
+
+  action_space_mode: 'absolute'
+  visual_domain: 'nyc'
