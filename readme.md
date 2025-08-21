@@ -1,4 +1,7 @@
 # AMFT: Aligning LLM Reasoners by Meta-Learning the Optimal Imitation-Exploration Balance
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
 This repository contains the official implementation for the paper: **"AMFT: Aligning LLM Reasoners by Meta-Learning the Optimal Imitation-Exploration Balance"**.
 
 ## Abstract
@@ -32,4 +35,5 @@ The core of AMFT is a single-stage training loop that dynamically and proactivel
     ```
 
 5.  **(Optional) Install vLLM**: For maximum efficiency in RL rollouts and evaluation, installing vLLM is recommended. Please refer to the [official documentation](https://docs.vllm.ai/en/latest/getting_started/installation.html) for installation instructions.
+
 
