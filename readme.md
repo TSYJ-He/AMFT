@@ -6,7 +6,7 @@ This repository contains the official implementation for the paper: **"AMFT: Ali
 
 ## Abstract
 
-Large Language Models (LLMs) are typically fine-tuned for reasoning tasks through a two-stage pipeline of Supervised Fine-Tuning (SFT) followed by Reinforcement Learning (RL), a process fraught with catastrophic forgetting and suboptimal trade-offs between imitation and exploration. Recent single-stage methods attempt to unify SFT and RL using heuristics, but lack a principled mechanism for dynamically balancing the two paradigms. In this paper, we reframe this challenge through the theoretical lens of **implicit rewards**, viewing SFT and RL not as distinct methods but as complementary reward signals. We introduce **Adaptive Meta Fine‑Tuning (AMFT)**, a novel single-stage algorithm that learns the optimal balance between SFT's implicit, path-level reward and RL's explicit, outcome-based reward. The core of AMFT is a **meta-gradient adaptive weight controller** that treats the SFT-RL balance as a learnable parameter, dynamically optimizing it to maximize long-term task performance. AMFT consistently establishes a new state-of-the-art and demonstrates superior generalization on out-of-distribution (OOD) tasks.
+Large Language Models (LLMs) are typically fine-tuned for reasoning tasks through a two-stage pipeline of Supervised Fine-Tuning (SFT) followed by Reinforcement Learning (RL), a process fraught with catastrophic forgetting and suboptimal trade-offs between imitation and exploration. Recent single-stage methods attempt to unify SFT and RL using heuristics, but lack a principled mechanism for dynamically balancing the two paradigms. In this paper, we reframe this challenge through the theoretical lens of **implicit rewards**, viewing SFT and RL not as distinct methods but as complementary reward signals. We introduce **Adaptive Meta Fine‑Tuning (AMFT)**, a novel and single-stage algorithm that learns the optimal balance between SFT's implicit, path-level reward and RL's explicit, outcome-based reward. The core of AMFT is a **meta-gradient adaptive weight controller** that treats the SFT-RL balance as a learnable parameter, dynamically optimizing it to maximize long-term task performance. AMFT consistently establishes a new state-of-the-art and demonstrates superior generalization on out-of-distribution (OOD) tasks.
 
 ## Framework Overview
 ![Framework](https://github.com/user-attachments/assets/58a3c829-dfea-44b3-941d-9ca8fd169edb)
@@ -35,5 +35,6 @@ The core of AMFT is a single-stage training loop that dynamically and proactivel
     ```
 
 5.  **(Optional) Install vLLM**: For maximum efficiency in RL rollouts and evaluation, installing vLLM is recommended. Please refer to the [official documentation](https://docs.vllm.ai/en/latest/getting_started/installation.html) for installation instructions.
+
 
 
