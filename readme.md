@@ -2,6 +2,9 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2508.06944-b31b1b.svg)](https://arxiv.org/abs/2508.06944) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3123/)
 
+![Framework](https://github.com/user-attachments/assets/90b33fa6-66de-4141-b83e-8e07d9f5763d)
+
+
 This repository contains the official implementation of **Adaptive Meta Fine-Tuning (AMFT)**, a novel single-stage algorithm for fine-tuning Large Language Models (LLMs) that dynamically balances Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL) using meta-gradients. AMFT reframes SFT and RL as complementary reward signals and learns an optimal training curriculum to maximize long-term task performance, achieving state-of-the-art results on mathematical reasoning, abstract visual reasoning, and vision-language navigation benchmarks.
 
 The code is based on the paper: [AMFT: Aligning LLM Reasoners by Meta-Learning the Optimal Imitation-Exploration Balance](https://arxiv.org/abs/2508.06944) (Preprint, under review, arXiv:2508.06944v1 [cs.LG] 9 Aug 2025).
@@ -74,6 +77,10 @@ To replicate Table 2 (Math Reasoning):
 
 Expected runtime: ~10-20 hours on 4x A100 GPUs for full training.
 
+### For more infomation please go to the appendix
+
+<img width="3000" height="1800" alt="Appendix_GP_Dynamics" src="https://github.com/user-attachments/assets/bc9a8e0e-2ccd-45c2-8ce6-e30963074676" />
+<img width="3000" height="1800" alt="Appendix_VIRL_Dynamics" src="https://github.com/user-attachments/assets/86d2a653-039a-4573-95e0-25682c8ba7ea" />
 
 
 ## Dependencies
@@ -116,6 +123,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Contact: helx23@mails.tsinghua.edu.cn for questions.
 
 For more details, refer to the paper or appendices. Happy fine-tuning! 🚀
+
 
 
 
