@@ -1,5 +1,3 @@
-# /amft-project/src/controller/adaptive_weight_controller.py
-
 import torch
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
