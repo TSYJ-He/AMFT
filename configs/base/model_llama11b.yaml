@@ -1,6 +1,4 @@
 # /amft-project/configs/base/model_llama11b.yaml
-
-
 model_name_or_path: "meta-llama/Llama-3.2-11B-V-Instruct"
 
 tokenizer_name_or_path: "meta-llama/Llama-3.2-11B-V-Instruct"
