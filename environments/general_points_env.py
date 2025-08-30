@@ -4,9 +4,7 @@ import random
 import re
 import operator
 from typing import List, Tuple, Dict, Any, Optional
-
 class GeneralPointsEnv:
-
     SUITS = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
     RANKS = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
 
@@ -60,7 +58,6 @@ class GeneralPointsEnv:
             "cards": self.current_cards,
             "card_values": self.current_card_values
         }
-
     def verify_formula(self, formula: str) -> Tuple[str, Optional[float]]:
         try:
             numbers_in_formula = sorted([int(n) for n in re.findall(r'\d+', formula)])
@@ -78,12 +75,9 @@ class GeneralPointsEnv:
             return 'WRONG_RESULT', result
     def step(self, action: str) -> Tuple[Dict[str, Any], float, bool, Dict[str, Any]]:
         self.steps_taken += 1
-
         status, result = self.verify_formula(action)
-
         reward = 0.0
         done = False
-
         if status == 'CORRECT':
             reward = 5.0
             done = True
