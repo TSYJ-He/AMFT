@@ -1,20 +1,15 @@
 # /amft-project/evaluation/oat_grader_wrapper.py
-
 import logging
 import re
 from typing import List, Optional, Any
 from sympy import sympify, SympifyError
-
 logger = logging.getLogger(__name__)
-
-
 class OATGraderWrapper:
     def __init__(self, task_name: str):
         self.task_name = task_name
         logger.info(f"Initialized Grader for task: '{self.task_name}'.")
 
     def grade(self, generated_texts: List[str], ground_truth_texts: List[str]) -> List[float]:
-
         scores = []
         for gen_text, gt_text in zip(generated_texts, ground_truth_texts):
             try:
@@ -37,8 +32,6 @@ class OATGraderWrapper:
         match = re.search(r'\\boxed\{(.+?)\}', text)
         if match:
             return match.group(1).strip()
-
-
         numbers = re.findall(r'[-+]?\d+(?:/\d+)?(?:\.\d+)?', text)
         if numbers:
             return numbers[-1].strip()
