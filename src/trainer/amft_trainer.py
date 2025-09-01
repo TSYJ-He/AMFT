@@ -11,9 +11,7 @@ from src.model.policy_model import PolicyModel
 from src.controller.adaptive_weight_controller import AdaptiveWeightController
 from src.trainer.ppo_loss import compute_ppo_loss
 from src.utils.logging import log_metrics
-
 logger = logging.getLogger(__name__)
-
 class AMFTTrainer:
 
     def __init__(
@@ -121,12 +119,10 @@ class AMFTTrainer:
                 sft_batch['labels'].view(-1),
                 ignore_index=self.policy_model.tokenizer.pad_token_id
             )
-
             rl_loss, value_loss, metrics = compute_ppo_loss(
                 self.policy_model,
                 rl_rollouts  # contains rewards, advantages, etc.
             )
-
             current_entropy = metrics['policy_entropy'].mean()
             meta_grad = 0.0
 
@@ -195,7 +191,6 @@ class AMFTTrainer:
             num_batches += 1
             if num_batches >= 20:
                 break
-
         self.policy_model.train()
         return total_entropy / num_batches
 
