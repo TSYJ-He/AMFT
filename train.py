@@ -10,7 +10,6 @@ from src.utils.logging import setup_logging
 from src.model.policy_model import PolicyModel
 from data.unified_datamodule import UnifiedDataModule
 from src.trainer.amft_trainer import AMFTTrainer
-
 logger = logging.getLogger(__name__)
 def merge_configs(base_config: Dict[str, Any], cli_args: argparse.Namespace) -> Dict[str, Any]:
 
@@ -106,4 +105,5 @@ if __name__ == "__main__":
     parser.add_argument("--output_dir", type=str, default=None)
 
     args = parser.parse_args()
+
     main(args)
