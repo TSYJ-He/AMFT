@@ -1,5 +1,4 @@
 # /amft-project/environments/general_points_env.py
-
 import random
 import re
 import operator
